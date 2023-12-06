@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_ui/pages/cartpage.dart';
 import 'package:sneakers_ui/pages/shopage.dart';
-// import 'package:sneakers_ui/widget/mybnav.dart';
 
 class homePage extends StatefulWidget {
   homePage({super.key});
@@ -26,11 +25,6 @@ class _homePageState extends State<homePage> {
         padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
         child: BottomNavigationBar(
             currentIndex: _selectedindex,
-            onTap: (int _selectedindex) {
-              setState(() {
-                _selectedindex = _selectedindex;
-              });
-            },
             backgroundColor: Colors.grey[300],
             iconSize: (30),
             elevation: 0,
@@ -132,6 +126,10 @@ class _homePageState extends State<homePage> {
             ),
             SizedBox(
               height: 300,
+            ),
+            Divider(
+              thickness: (2),
+              color: Colors.grey.shade100,
             ),
             ListTile(
               onTap: () {},
