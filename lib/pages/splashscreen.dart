@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class spalshscreen extends StatelessWidget {
+class spalshscreen extends StatefulWidget {
   const spalshscreen({super.key});
 
+  @override
+  State<spalshscreen> createState() => _spalshscreenState();
+}
+
+class _spalshscreenState extends State<spalshscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +21,7 @@ class spalshscreen extends StatelessWidget {
             ),
             // logo
             Image.asset(
-              "assets/pngwing.com (1).png",
+              "assets/nikelogo.png",
               height: 220,
               width: 330,
             ),

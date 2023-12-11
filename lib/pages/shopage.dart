@@ -66,7 +66,7 @@ class shopage extends StatelessWidget {
                   ),
                   Container(
                     child: Image.asset(
-                      "assets/pngwing.com (9).png",
+                      "assets/firelogo.png",
                       height: 50,
                       width: 50,
                     ),
@@ -118,7 +118,7 @@ class shopage extends StatelessWidget {
                           width: 10,
                         ),
                         shoetile(
-                            imagepath: "assets/pngwing.com (4).png",
+                            imagepath: "assets/shoe5.png",
                             shoename: "Air nike",
                             shoedecription: "cool shoe",
                             price: "#250,000"),
@@ -168,7 +168,7 @@ class shopage extends StatelessWidget {
                           height: 10,
                         ),
                         shoetile(
-                            imagepath: "assets/pngwing.com (4).png",
+                            imagepath: "assets/shoe5.png",
                             shoename: "Air nike",
                             shoedecription: "cool shoe",
                             price: "#250,000"),

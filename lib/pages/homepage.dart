@@ -33,13 +33,13 @@ class _homePageState extends State<homePage> {
             showUnselectedLabels: false,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home_max_sharp),
-                label: "Home",
-              ),
+                  icon: Icon(Icons.home_max_sharp),
+                  label: "Home",
+                  backgroundColor: Colors.amber),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart_sharp),
-                label: "Cart",
-              ),
+                  icon: Icon(Icons.shopping_cart_sharp),
+                  label: "Cart",
+                  backgroundColor: Colors.blue),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 label: "Settings",
