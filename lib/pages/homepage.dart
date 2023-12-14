@@ -12,10 +12,15 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   int _selectedindex = 0;
 
-  final List _pages = [
+  final List<Widget> _pages = [
     shopage(),
     cartpage(),
   ];
+  void _navigatebar(_pages) {
+    setState(() {
+      _selectedindex = _pages;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +30,7 @@ class _homePageState extends State<homePage> {
         padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
         child: BottomNavigationBar(
             currentIndex: _selectedindex,
+            onTap: (value) => _navigatebar,
             backgroundColor: Colors.grey[300],
             iconSize: (30),
             elevation: 0,
@@ -69,7 +75,7 @@ class _homePageState extends State<homePage> {
             //logo
             DrawerHeader(
                 child: Image.asset(
-              "assets/pngwing.com (1).png",
+              "assets/nikelogo.png",
               color: Colors.white,
               height: 200,
               width: 200,
@@ -83,7 +89,9 @@ class _homePageState extends State<homePage> {
             ),
 
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.popAndPushNamed(context, "/shopage");
+              },
               splashColor: Colors.white,
               leading: Icon(
                 Icons.home,
