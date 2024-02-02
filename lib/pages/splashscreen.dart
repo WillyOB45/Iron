@@ -16,7 +16,7 @@ class _spalshscreenState extends State<spalshscreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             // logo
@@ -25,20 +25,20 @@ class _spalshscreenState extends State<spalshscreen> {
               height: 220,
               width: 330,
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
 
             // heading
 
-            Text(
+            const Text(
               "Just Do It",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: (25),
-              ),
+                  fontWeight: FontWeight.bold,
+                  fontSize: (25),
+                  color: Colors.grey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
 
@@ -51,22 +51,22 @@ class _spalshscreenState extends State<spalshscreen> {
                   color: Colors.grey.shade600),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
 
             //button
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacementNamed(context, "/homepage");
+                Navigator.pushNamed(context, "/homepage");
               },
               child: Container(
                 width: 300,
-                padding: EdgeInsets.all(25),
+                padding: const EdgeInsets.all(25),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.black),
-                child: Text(
+                child: const Text(
                   "Shop Here",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,

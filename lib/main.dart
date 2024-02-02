@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_ui/pages/homepage.dart';
-import 'package:sneakers_ui/pages/shopage.dart';
 import 'package:sneakers_ui/pages/splashscreen.dart';
+import 'package:sneakers_ui/pages/splashscreen1.dart';
 
 void main() {
-  runApp(myApp());
+  // SystemChrome.setEnabledSystemUIMode([SystemUiOverlayStyle(statusBarColor: Colors.transparent)])
+  runApp(const myApp());
 }
 
 class myApp extends StatelessWidget {
@@ -14,14 +15,14 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      themeMode: ThemeMode.system,
       initialRoute: "/",
       routes: {
-        "/": (context) => spalshscreen(),
-        "/homepage": (context) => homePage(),
-        "/shopage": (context) => shopage(),
+        "/splashscreen": (context) => const splashScreenM(),
+        "/secondscreen": (context) => const spalshscreen(),
+        "/homepage": (context) => const homePage(),
+        // "/shopage": (context) => shopage(),
       },
+      home: const splashScreenM(),
     );
   }
 }
