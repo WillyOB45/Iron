@@ -12,7 +12,7 @@ class Cardtiles extends StatelessWidget {
         onPressed: onPressed,
         icon: Icon(
           icon,
-          size: (30),
+          size: (20),
         ),
       ),
     );
