@@ -14,7 +14,12 @@ class homePage extends StatefulWidget {
 }
 
 class _homePageState extends State<homePage> {
-  bool ispower = true;
+  List productdetails = [
+    ShoesDetails(
+        shoename: "air max", shoeprice: 200, shoeimage: "assets/shoe2.png"),
+    ShoesDetails(
+        shoename: "air max 90", shoeprice: 300, shoeimage: "assets/shoe3.png"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +28,8 @@ class _homePageState extends State<homePage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 5),
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          physics: const NeverScrollableScrollPhysics(),
           child: Column(
             children: [
               const SizedBox(
@@ -109,10 +116,30 @@ class _homePageState extends State<homePage> {
               const SizedBox(
                 height: 20,
               ),
+              Expanded(
+                  child: ListView.builder(
+                itemCount: productdetails.length,
+                itemBuilder: (context, index) {
+                  final ShoesDetails = productdetails[index];
+                  return rectacard(
+                    firstheading: ShoesDetails.shoename,
+                    price: ShoesDetails.shoeprice,
+                    imageurl: ShoesDetails.shoeimage,
+                  );
+                },
+              ))
             ],
           ),
         ),
       ),
     );
   }
+}
+
+class ShoesDetails {
+  String? shoename;
+  String? shoeimage;
+  double? shoeprice;
+
+  ShoesDetails({this.shoename, this.shoeprice, this.shoeimage});
 }
