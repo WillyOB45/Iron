@@ -118,6 +118,7 @@ class _homePageState extends State<homePage> {
               ),
               Expanded(
                   child: ListView.builder(
+                scrollDirection: Axis.horizontal,
                 itemCount: productdetails.length,
                 itemBuilder: (context, index) {
                   final ShoesDetails = productdetails[index];
