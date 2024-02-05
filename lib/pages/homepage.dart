@@ -116,19 +116,27 @@ class _homePageState extends State<homePage> {
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                  child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: productdetails.length,
-                itemBuilder: (context, index) {
-                  final ShoesDetails = productdetails[index];
-                  return rectacard(
-                    firstheading: ShoesDetails.shoename,
-                    price: ShoesDetails.shoeprice,
-                    imageurl: ShoesDetails.shoeimage,
-                  );
-                },
-              ))
+              Column(
+                children: [
+                  Flexible(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: productdetails.length,
+                      itemBuilder: (context, index) {
+                        final ShoesDetails = productdetails[index];
+                        return SizedBox(
+                          child: rectacard(
+                            firstheading: ShoesDetails.shoename,
+                            price: ShoesDetails.shoeprice,
+                            imageurl: ShoesDetails.shoeimage,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
