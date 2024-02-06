@@ -17,7 +17,7 @@ class _splashScreenMState extends State<splashScreenM> {
 
   navigatetohome() async {
     await Future.delayed(const Duration(seconds: 10));
-    Navigator.pushNamed(context, "/secondscreen");
+    Navigator.(context, "/secondscreen");
   }
 
   @override

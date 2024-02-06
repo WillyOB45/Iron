@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_ui/pages/homepage.dart';
+import 'package:sneakers_ui/pages/shoepage.dart';
+import 'package:sneakers_ui/pages/sneakers_homepage.dart';
 import 'package:sneakers_ui/pages/splashscreen.dart';
 import 'package:sneakers_ui/pages/splashscreen1.dart';
 
@@ -19,8 +20,8 @@ class myApp extends StatelessWidget {
       routes: {
         "/splashscreen": (context) => const splashScreenM(),
         "/secondscreen": (context) => const spalshscreen(),
-        "/homepage": (context) => const homePage(),
-        // "/shopage": (context) => shopage(),
+        "/sneakershomepage": (context) => const sneakershome(),
+        "/shoepage": (context) => const ShoePage(ShoesDetails: ShoesDetails),
       },
       home: const splashScreenM(),
     );

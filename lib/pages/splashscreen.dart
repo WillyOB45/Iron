@@ -58,7 +58,7 @@ class _spalshscreenState extends State<spalshscreen> {
             //button
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, "/homepage");
+                Navigator.pushNamed(context, "/sneakershomepage");
               },
               child: Container(
                 width: 300,
