@@ -5,13 +5,15 @@ class Bannercard extends StatelessWidget {
   final String? heading;
   final String? subtitle;
   final String? insidebuttontexts;
+  void Function()? onTap;
 
-  const Bannercard(
+  Bannercard(
       {super.key,
       required this.imagePath,
       required this.heading,
       required this.subtitle,
-      required this.insidebuttontexts});
+      required this.insidebuttontexts,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -50,16 +52,19 @@ class Bannercard extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: 40,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: const Text(
-                      "Shop Here",
-                      style: TextStyle(fontSize: (15), color: Colors.black),
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: const Text(
+                        "Shop Here",
+                        style: TextStyle(fontSize: (15), color: Colors.black),
+                      ),
                     ),
                   ),
                   const SizedBox(
