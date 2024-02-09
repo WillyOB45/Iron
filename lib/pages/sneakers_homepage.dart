@@ -106,15 +106,14 @@ class _sneakershomeState extends State<sneakershome> {
             height: 20,
           ),
           //banner card
-          SizedBox(
-            child: Bannercard(
-              onTap: navigatetoshoepage,
-              imagePath: "assets/shoe2.png",
-              heading: "Special Offer",
-              subtitle: "40% Off",
-              insidebuttontexts: "Shop Here",
-            ),
+          Bannercard(
+            onTap: navigatetoshoepage,
+            imagePath: "assets/shoe2.png",
+            heading: "Special Offer",
+            subtitle: "40% Off",
+            insidebuttontexts: "Shop Here",
           ),
+
           const SizedBox(
             height: 10,
           ),
@@ -133,26 +132,11 @@ class _sneakershomeState extends State<sneakershome> {
           const SizedBox(
             height: 20,
           ),
-          Expanded(
-            child: SizedBox.expand(
-              child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                physics: ScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: productdetails.length,
-                itemBuilder: (context, index) {
-                  var ShoesDetails = productdetails[index];
-                  padding:
-                  const EdgeInsets.all(16.0);
-                  return rectacard(
-                    firstheading: ShoesDetails.shoename,
-                    price: ShoesDetails.shoeprice,
-                    imageurl: ShoesDetails.shoeimage,
-                  );
-                },
-              ),
-            ),
-          )
+
+          rectacard(
+              firstheading: "nike retro",
+              price: "100000",
+              imageurl: "assets/shoe2.png")
         ]),
       ),
     );
